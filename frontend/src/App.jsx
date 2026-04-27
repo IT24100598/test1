@@ -6,6 +6,7 @@ function App() {
   const [formData, setFormData] = useState({
     name: '',
     price: '',
+    discountPercentage: '',
     // TODO (Student): Add missing fields for the state
   });
 
@@ -34,6 +35,7 @@ function App() {
       setFormData({
         name: '',
         price: '',
+        discountPercentage: '',
         // TODO (Student): Clear the missing fields here
       });
     } catch (err) {
@@ -75,6 +77,16 @@ function App() {
               required
             />
           </div>
+          <div className="form-group">
+            <label>Discount Percentage:</label>
+            <input
+              type="number"
+              name="discountPercentage"
+              value={formData.discountPercentage}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
           {/* TODO (Student): Add input fields for 'description' and 'category' here */}
 
@@ -93,6 +105,8 @@ function App() {
                 <div className="item-details">
                   <h3>{item.name}</h3>
                   <p>Price: ${item.price}</p>
+                  <p>Discount Percentage: %{item.discountPercentage}</p>
+                  
                   {/* TODO (Student): Display 'description' and 'category' here */}
                 </div>
                 <div className="item-actions">

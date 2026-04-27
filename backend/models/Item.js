@@ -9,6 +9,10 @@ const itemSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  discountPercentage: {
+     type: Number,
+     required: true,
+  }
   // TODO (Student): Add the missing fields based on the instructions.md
   // 1. description
   // 2. category

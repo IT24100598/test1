@@ -14,11 +14,12 @@ router.get('/', async (req, res) => {
 
 // POST /api/items - Create a new item
 router.post('/', async (req, res) => {
-  const { name, price } = req.body; // TODO (Student): Read the new fields here
+  const { name, price, discountPercentage } = req.body; // TODO (Student): Read the new fields here
 
   const item = new Item({
     name,
     price,
+    discountPercentage
     // TODO (Student): Assign the new fields here
   });
 
